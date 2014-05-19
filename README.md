@@ -3,6 +3,8 @@ What is this?
 
 
 A tool that helps you to avoid play with trolls in your team. 
+Download or clone this repo and the application is at:
+LolTroll/bin/Release/LolTroll.exe
 
 
 How does it work?
@@ -45,5 +47,7 @@ Rito can't ban you for using this, its just an application which never access di
 Do you think I'm triying to steal your account? No, I don't want your noob account but if you don't trust me, get the code and compile it by yourself.
 
 This application NEVER gets connected to internet. Maybe, in a future, you will be able to save your troll list in the cloud (or someting else) but not now.
+
+I have programmed it using visual studio 2013 and you need .net framework 4.5
 
 If you find some bug or feature request please open an issue.
