@@ -1,0 +1,53 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:local="clr-namespace:LolTroll" x:Class="LolTroll.MainWindow"
+        
+        Title="LoL Troll" Height="434.564" Width="508.966" ResizeMode="NoResize">
+
+    <Grid Margin="0,0,0,11">
+        <Button x:Name="getSummonersButton" Content="Get summoners" HorizontalAlignment="Left" Margin="232,36,0,0" VerticalAlignment="Top" Width="101" Click="getSummonersButtonClick"/>
+        <DataGrid x:Name="trollTable" HorizontalAlignment="Left" Margin="215,93,0,0" VerticalAlignment="Top" Height="286" Width="266" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Troll name" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Reason" Width="*" Binding="{Binding Reason}"/>
+                <DataGridTextColumn Header="Fucktard level" Width="*" Binding="{Binding FucktardLevel}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Header="Database" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="62" Width="200">
+            <Grid HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="180">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="saveDatabaseButton" Content="Save" HorizontalAlignment="Left" Margin="96,0,0,0" VerticalAlignment="Top" Width="75" Click="saveDatabaseButtonClick" Grid.RowSpan="2"/>
+                <Button x:Name="loadDatabaseButton" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="loadDatabaseButtonClick" Grid.RowSpan="2"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Summoners" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="295" Width="200">
+            <Grid HorizontalAlignment="Left" Height="283" Margin="0,2,-2,-12" VerticalAlignment="Top" Width="190">
+                <TextBox x:Name="summoner1" HorizontalAlignment="Left" Height="23" Margin="10,25,0,0" TextWrapping="Wrap" Background="{Binding Path=BackgroundInfo[0]}" Text="{Binding Path=TrollNames[0]}" VerticalAlignment="Top" Width="141"/>
+                <TextBox x:Name="summoner2" HorizontalAlignment="Left" Height="23" Margin="10,78,0,0" TextWrapping="Wrap" Background="{Binding Path=BackgroundInfo[1]}" Text="{Binding Path=TrollNames[1]}" VerticalAlignment="Top" Width="141"/>
+                <TextBox x:Name="summoner3" HorizontalAlignment="Left" Height="23" Margin="10,132,0,0" TextWrapping="Wrap" Background="{Binding Path=BackgroundInfo[2]}" Text="{Binding Path=TrollNames[2]}" VerticalAlignment="Top" Width="141"/>
+                <TextBox x:Name="summoner4" HorizontalAlignment="Left" Height="23" Margin="10,186,0,0" TextWrapping="Wrap" Background="{Binding Path=BackgroundInfo[3]}" Text="{Binding Path=TrollNames[3]}" VerticalAlignment="Top" Width="141"/>
+                <TextBox x:Name="summoner5" HorizontalAlignment="Left" Height="23" Margin="10,240,0,0" TextWrapping="Wrap" Background="{Binding Path=BackgroundInfo[4]}" Text="{Binding Path=TrollNames[4]}" VerticalAlignment="Top" Width="141"/>
+                <Label Content="Summoner 1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                <Label Content="Summoner 2" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
+                <Label Content="Summoner 3" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top"/>
+                <Label Content="Summoner 4" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top"/>
+                <Label Content="Summoner 5" HorizontalAlignment="Left" Margin="10,214,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="level1" HorizontalAlignment="Left" Margin="151,22,0,0" VerticalAlignment="Top" Width="29" Content="{Binding Path=FucktardInfo[0]}"/>
+                <Label x:Name="level2" HorizontalAlignment="Left" Margin="156,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.348,-0.154"  Content="{Binding Path=FucktardInfo[1]}"/>
+                <Label x:Name="level3" HorizontalAlignment="Left" Margin="156,129,0,0" VerticalAlignment="Top"  Content="{Binding Path=FucktardInfo[2]}"/>
+                <Label x:Name="level4" HorizontalAlignment="Left" Margin="156,183,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.609,0.038"  Content="{Binding Path=FucktardInfo[3]}"/>
+                <Label x:Name="level5" HorizontalAlignment="Left" Margin="156,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.435,0.192"  Content="{Binding Path=FucktardInfo[4]}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Actions" HorizontalAlignment="Left" Margin="215,10,0,0" VerticalAlignment="Top" Height="62" Width="266">
+            <Grid HorizontalAlignment="Left" Height="42" Margin="0,0,-12,-2" VerticalAlignment="Top" Width="257">
+                <Button x:Name="searchTrollsButton" Content="Search trolls" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" Width="101" Click="searchTrollsButtonClick"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
