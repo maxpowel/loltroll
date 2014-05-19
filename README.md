@@ -8,7 +8,7 @@ A tool that helps you to avoid play with trolls in your team.
 How does it work?
 =================
 
-When you are in select champ room, the application takes a snap of this window and get the names of your team summoners. That task done by an OCR (a tool that read letters from images). This is how the summoners names are fetched (not using any api neither patching the game or something weird).
+When you are in select champ room, the application takes a snap of this window and gets the names of your team summoners. That task is done by an OCR (a tool that read words from images). This is how the summoners names are fetched (not using any api neither patching the game or something weird).
 
 Usage
 =====
