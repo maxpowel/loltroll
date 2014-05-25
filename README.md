@@ -1,10 +1,15 @@
+Download
+=========
+If you dont want to compile it by yourself, you can download a compiled version here
+https://drive.google.com/folderview?id=0B1U4pjJ0URlZeGFZYkIyNGt2dlk&usp=sharing
+
 What is this?
 =============
 
 
 A tool that helps you to avoid play with trolls in your team. 
-Download or clone this repo and the application is at:
-LolTroll/bin/Release/LolTroll.exe
+
+
 
 
 How does it work?
