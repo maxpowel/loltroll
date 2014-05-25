@@ -44,6 +44,7 @@ namespace LolTroll
         public MainWindow()
         {            
             InitializeComponent();
+            Debug.WriteLine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             this.DataContext = data;
             trollTable.ItemsSource = data.TrollList;
 
@@ -132,7 +133,9 @@ namespace LolTroll
             TesseractOCR ocr = new TesseractOCR(data.WorkingDir+ @"\Tesseract-OCR\tesseract.exe");
             for (int i = 0; i < 5; i++)
             {
-                data.TrollNames[i] = ocr.OCRFromBitmap(new Bitmap(data.DataDir + @"\crop"+i+".tif"));
+                //data.TrollNames[i] = ocr.OCRFromBitmap(new Bitmap(data.DataDir + @"\crop"+i+".tif"));
+                data.TrollNames[i] = ocr.OCRFromFile(data.DataDir + @"\crop" + i + ".tif");
+                //data.TrollNames[i] = "" + i;
             }
         }
 

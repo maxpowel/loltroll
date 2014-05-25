@@ -33,10 +33,10 @@ namespace LolTroll
         {
             if (Environment.GetEnvironmentVariable("TESSDATA_PREFIX") == null)
                 // If it doesn't exist, create it.
-                Environment.SetEnvironmentVariable("TESSDATA_PREFIX", "E:");
+                Environment.SetEnvironmentVariable("TESSDATA_PREFIX", Directory.GetCurrentDirectory()+"/Tesseract-OCR/");
             else
             {
-                Environment.SetEnvironmentVariable("TESSDATA_PREFIX", "");
+                Environment.SetEnvironmentVariable("TESSDATA_PREFIX", Directory.GetCurrentDirectory() + "/Tesseract-OCR/");
             }
 
 
@@ -46,6 +46,7 @@ namespace LolTroll
             startinfo.CreateNoWindow = true;
             startinfo.UseShellExecute = false;
             startinfo.RedirectStandardOutput = true;
+
 
             Process proc = Process.Start(startinfo);
 
